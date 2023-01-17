@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 17:47:38 by jnoh              #+#    #+#             */
-/*   Updated: 2023/01/17 15:11:59 by jnoh             ###   ########.fr       */
+/*   Updated: 2023/01/17 15:16:34 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,7 @@ Fixed::Fixed( const int value )
 Fixed::Fixed( const float value )
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->value_ = (int)(value * ft_pow(2, this->fractional_bits_) + 0.5);
-	std::cout << this->value_ << std::endl;
+	this->value_ = (int)std::roundf(value * ft_pow(2, this->fractional_bits_));
 }
 
 Fixed	&Fixed::operator= ( const Fixed &fixed )
