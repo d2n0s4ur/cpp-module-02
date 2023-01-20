@@ -6,18 +6,18 @@
 #    By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/15 17:43:51 by jnoh              #+#    #+#              #
-#    Updated: 2023/01/17 19:17:48 by jnoh             ###   ########.fr        #
+#    Updated: 2023/01/20 15:50:02 by jnoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= 	c++
-CPPFLAGS= 	-Wall -Werror -Wextra -std=c++98 -pedantic
+CXX		= 	c++
+CXXFLAGS= 	-Wall -Werror -Wextra -std=c++98 -pedantic
 SRCS	= 	main.cpp Fixed.cpp
 NAME	=	a.out
 OBJS	=	$(SRCS:.cpp=.o)
 
 $(NAME) : $(OBJS)
-			$(CC) -o $(NAME) $(CPPFLAGS) $(OBJS)
+			$(CXX) -o $(NAME) $(CXXFLAGS) $(OBJS)
 
 all	: $(NAME)
 
